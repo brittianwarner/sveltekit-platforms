@@ -8,20 +8,19 @@
 
 	onMount(async () => {
 		try {
-				config = (
-					await import(
-						/* @vite-ignore */ `../apps/${$appId}/config.js`
-					)
-				).default;
+			config = (
+				await import(
+					/* @vite-ignore */ `../apps/${$appId}/config.js`
+				)
+			).default;
 
-				componentName = config[$page.url.pathname]
+			componentName = config[$page.url.pathname]
 
-				component = (
-					await import(
-						/* @vite-ignore */ `../apps/${$appId}/components/${componentName}.svelte`
-					)
-				).default;
-			
+			component = (
+				await import(
+					/* @vite-ignore */ `../apps/${$appId}/components/${componentName}.svelte`
+				)
+			).default;
 			
 		} catch (error) {
 			console.log(componentName, 'Does not Exist');

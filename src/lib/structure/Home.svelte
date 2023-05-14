@@ -4,25 +4,20 @@
 	let ComponentsIndex;
 
 	onMount(async () => {
-		try {
-			try{
-                ComponentsIndex = (
-					await import(
-						/* @vite-ignore */ `../apps/${$appId}/components/Home.svelte`
-					)
-				).default;
-            }catch(error){
-                ComponentsIndex = (
-					await import(
-						/* @vite-ignore */ `../apps/default/components/Home.svelte`
-					)
-				).default;
-            }
-				
-			
-		} catch (error) {
-			console.log(component, 'Does not Exist');
-		}
+	
+        try{
+            ComponentsIndex = (
+                await import(
+                    /* @vite-ignore */ `../apps/${$appId}/components/Home.svelte`
+                )
+            ).default;
+        }catch(error){
+            ComponentsIndex = (
+                await import(
+                    /* @vite-ignore */ `../apps/default/components/Home.svelte`
+                )
+            ).default;
+        }
 	});
 </script>
 

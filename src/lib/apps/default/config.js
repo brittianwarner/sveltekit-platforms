@@ -1,5 +1,3 @@
-const pages = {
-  "/about": "About",
-};
+const pages = {};
 
 export default pages;
