@@ -1,10 +1,18 @@
-<script>
+<script lang='ts'>
 	import { onMount } from 'svelte';
 	import { appId } from '$lib/stores/app';
 	import { page } from '$app/stores';
-	let config;
-	let component;
-	let componentName = 'Unknown'
+	import { redirect } from '@sveltejs/kit';
+
+	type Config = {
+		page: string
+	}
+
+	let config: Config;
+
+	let componentName: string;
+
+	let component: ConstructorOfATypedSvelteComponent;
 
 	onMount(async () => {
 		try {
@@ -14,7 +22,7 @@
 				)
 			).default;
 
-			componentName = config[$page.url.pathname]
+			componentName = config[$page.url.pathname as keyof typeof config]
 
 			component = (
 				await import(
@@ -23,7 +31,10 @@
 			).default;
 			
 		} catch (error) {
-			console.log(componentName, 'Does not Exist');
+			//console.log(componentName, 'Does not Exist');
+			//Redirect to Home
+			throw redirect(301,'/')
+
 		}
 	});
 </script>
@@ -32,4 +43,4 @@
 	<div class="min-h-full">	
 		<slot />
 	</div>
-	</svelte:component>
+</svelte:component>

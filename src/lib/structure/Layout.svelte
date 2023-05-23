@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { appId } from '$lib/stores/app';
+	import GithubLogo from '$lib/components/GithubLogo.svelte'
 	
 	let LayoutIndex;
 
@@ -27,3 +28,6 @@
 		<slot />
 	</div>
 </svelte:component>
+
+
+<GithubLogo />
