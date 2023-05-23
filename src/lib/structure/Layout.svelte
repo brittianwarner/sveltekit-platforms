@@ -1,7 +1,7 @@
 <script lang='ts'>
 	import { onMount } from 'svelte';
 	import { appId } from '$lib/stores/app';
-	import GithubLogo from '$lib/components/GithubLogo.svelte'
+	import Logos from '$lib/components/Logos.svelte'
 	
 	let LayoutIndex: ConstructorOfATypedSvelteComponent;
 
@@ -30,4 +30,4 @@
 </svelte:component>
 
 
-<GithubLogo />
+<Logos />
