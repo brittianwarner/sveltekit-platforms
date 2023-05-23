@@ -28,7 +28,7 @@ _More docs coming soon..._
 
 ## Developing
 
-The `APP_ID` environment variable is required for local development and is used to switch context between apps. Find an example [here](https://github.com/brittianwarner/sveltekit-platforms/blob/master/env.example).
+The `APP_ID` environment variable is required for local development and is used to switch context between apps. Find an example [here](https://github.com/brittianwarner/sveltekit-platforms/blob/master/.env.example).
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
