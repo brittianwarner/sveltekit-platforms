@@ -1,4 +1,4 @@
-# Sveltekit Platforms Starter Template
+# Sveltekit Platforms Starter Template 🚀️
 
 A simple starter template for building platforms on Vercel.
 
@@ -9,6 +9,8 @@ A simple starter template for building platforms on Vercel.
 Sveltekit Platforms is your starting point for developing a fully scalable platforms implementation built with your favorite framework on Vercel. This is intended to be a simple template and can be extended in many ways to unlock even more amazing functionality.
 
 To get started, deploy to Vercel using the button above and clone the repo. Each "app" can be found in the `/lib/apps` folder. This version uses the subdomain of the url host to determine which app components to render in real time.
+
+### Important: This requires the use of [Wildcard domains](https://vercel.com/docs/concepts/projects/domains#subdomains,-wildcard-domains,-and-apex-domains) on Vercel. 👀️ 👀️
 
 ### Example
 
