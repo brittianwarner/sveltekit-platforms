@@ -1,9 +1,9 @@
-<script>
+<script lang='ts'>
 	import { onMount } from 'svelte';
 	import { appId } from '$lib/stores/app';
 	import GithubLogo from '$lib/components/GithubLogo.svelte'
 	
-	let LayoutIndex;
+	let LayoutIndex: ConstructorOfATypedSvelteComponent;
 
 	onMount(async () => {
 		try{

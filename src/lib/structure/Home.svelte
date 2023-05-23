@@ -1,7 +1,8 @@
-<script>
+<script lang='ts'>
 	import { onMount } from 'svelte';
 	import { appId } from '$lib/stores/app';
-	let ComponentsIndex;
+    
+	let ComponentsIndex: ConstructorOfATypedSvelteComponent;;
 
 	onMount(async () => {
 	
