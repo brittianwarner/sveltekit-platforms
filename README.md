@@ -12,23 +12,23 @@ To get started, deploy to Vercel using the button above and clone the repo. Each
 
 ### Example
 
-[App1](https://app1.platforms.pageApp)
+[App1](https://app1.platforms.page)
 
-[App2](https://app2.platforms.pageApp)
+[App2](https://app2.platforms.page)
 
-[Default](https://default.platforms.pageApp)
+[Default](https://default.platforms.page)
 
-[Type any subdomain you want](https://anything-you-want.platforms.pageApp)
+[Type any subdomain you want](https://anything-you-want.platforms.page)
 
 Each subdomain above maps to an app in the `/lib/apps` folder.
 
-The [config.js](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/config.jshttps:/) file contains the page mappings needed to create more pages in your app. For example, [this](https://github.com/brittianwarner/sveltekit-platforms/blob/0be64c3132c53d5340245d3fee539e1493606b43/src/lib/apps/app1/config.js#L2https:/) mapping in [app1](https://github.com/brittianwarner/sveltekit-platforms/tree/master/src/lib/apps/app1https:/) the [About page](https://app1.platforms.page/abouthttps:/) is mapped to the [About.svelte](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/components/About.sveltehttps:/) component.
+The [config.js](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/config.js/) file contains the page mappings needed to create more pages in your app. For example, [this](https://github.com/brittianwarner/sveltekit-platforms/blob/0be64c3132c53d5340245d3fee539e1493606b43/src/lib/apps/app1/config.js#L2) mapping in [app1](https://github.com/brittianwarner/sveltekit-platforms/tree/master/src/lib/apps/app1) the [About page](https://app1.platforms.page/about) is mapped to the [About.svelte](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/components/About.svelte) component.
 
 _More docs coming soon..._
 
 ## Developing
 
-The `APP_ID` environment variable is required for local development and is used to switch context between apps. Find an example [here](https://github.com/brittianwarner/sveltekit-platforms/blob/master/env.examplehttps:/).
+The `APP_ID` environment variable is required for local development and is used to switch context between apps. Find an example [here](https://github.com/brittianwarner/sveltekit-platforms/blob/master/env.example).
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
