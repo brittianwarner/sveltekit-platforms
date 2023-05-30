@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { onMount } from 'svelte';
+	import { beforeUpdate } from 'svelte';
 	import { appId } from '$lib/stores/app';
 	import { page } from '$app/stores';
 	import { redirect } from '@sveltejs/kit';
@@ -14,7 +14,7 @@
 
 	let component: ConstructorOfATypedSvelteComponent;
 
-	onMount(async () => {
+	beforeUpdate(async () => {
 		try {
 			config = (
 				await import(
@@ -31,10 +31,7 @@
 			).default;
 			
 		} catch (error) {
-			//console.log(componentName, 'Does not Exist');
-			//Redirect to Home
-			throw redirect(301,'/')
-
+			console.log(componentName, 'Does not Exist');
 		}
 	});
 </script>
