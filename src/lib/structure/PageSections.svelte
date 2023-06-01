@@ -1,8 +1,7 @@
 <script lang='ts'>
-	import { beforeUpdate } from 'svelte';
+	import { onMount,tick } from 'svelte';
 	import { appId } from '$lib/stores/app';
 	import { page } from '$app/stores';
-	import { redirect } from '@sveltejs/kit';
 
 	type Config = {
 		page: string
@@ -14,7 +13,7 @@
 
 	let component: ConstructorOfATypedSvelteComponent;
 
-	beforeUpdate(async () => {
+	onMount(async () => {
 		try {
 			config = (
 				await import(
@@ -29,15 +28,18 @@
 					/* @vite-ignore */ `../apps/${$appId}/components/${componentName}.svelte`
 				)
 			).default;
-			
+			await tick();
 		} catch (error) {
 			console.log(componentName, 'Does not Exist');
 		}
 	});
 </script>
 
+
+{#key $page.url.pathname}
 <svelte:component this={component} >
 	<div class="min-h-full">	
 		<slot />
 	</div>
 </svelte:component>
+{/key}
