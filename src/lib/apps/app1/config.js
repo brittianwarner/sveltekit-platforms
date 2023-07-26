@@ -1,5 +1,6 @@
 const pages = {
-  "/about": "About",
+  "/company": "Company",
+  "/team": "Team",
 };
 
 export default pages;

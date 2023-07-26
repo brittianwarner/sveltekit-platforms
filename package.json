@@ -27,8 +27,12 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-vercel": "^2.4.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.4",
+    "@tailwindcss/typography": "^0.5.9",
     "@threlte/core": "^6.0.0-next.7",
     "@threlte/extras": "^5.0.0-next.13",
+    "marked": "^5.1.2",
     "three": "^0.152.2"
   }
 }
