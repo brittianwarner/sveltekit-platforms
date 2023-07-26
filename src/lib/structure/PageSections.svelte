@@ -2,42 +2,36 @@
 	import { onMount,tick } from 'svelte';
 	import { appId } from '$lib/stores/app';
 	import { page } from '$app/stores';
+	import { beforeNavigate } from '$app/navigation';
 
-	type Config = {
-		page: string
-	}
-
-	let config: Config;
-
-	let componentName: string;
 
 	let component: ConstructorOfATypedSvelteComponent;
 
+	export let data;
+
 	onMount(async () => {
 		try {
-			config = (
-				await import(
-					/* @vite-ignore */ `../apps/${$appId}/config.js`
-				)
-			).default;
-
-			componentName = config[$page.url.pathname as keyof typeof config]
 
 			component = (
 				await import(
-					/* @vite-ignore */ `../apps/${$appId}/components/${componentName}.svelte`
+					/* @vite-ignore */ `../apps/${$appId}/components/${data.component}.svelte`
 				)
 			).default;
 			await tick();
 		} catch (error) {
-			console.log(componentName, 'Does not Exist');
+			console.log(data.component, 'Does not Exist');
 		}
 	});
+
+	beforeNavigate(()=>{
+		component.$destroy();
+	})
+	
 </script>
 
 
 {#key $page.url.pathname}
-<svelte:component this={component} >
+<svelte:component this={component} {data} >
 	<div class="min-h-full">	
 		<slot />
 	</div>

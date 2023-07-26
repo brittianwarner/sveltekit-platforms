@@ -1,5 +1,7 @@
 const pages = {
-  "/about": "About",
+  "/about": {
+    component: "About",
+  },
 };
 
 export default pages;

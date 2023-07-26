@@ -59,32 +59,14 @@ npm run build
 You can preview the production build with \`npm run preview\`.
 		`
 
-		const defaultDelay = .1;
-	let i = 0;
-	let j = 0;
 
-	const inputStart = () => {
-
-		if (j < markdownText.length) {
-			displayText += markdownText[j];
-			j++;
-			setTimeout(inputStart, defaultDelay);
-		}
-	};
-
-	onMount(() => {
-		inputStart()
-	})
-
-
-	$: displayText = ''
 </script>
 <section class="bg-white ">
     <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16 lg:px-12">
        
-        <h1 class="mb-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-orange-700 via-gray to-orange-300 underline tracking-tight leading-none  md:text-5xl lg:text-6xl ">Sveltekit Platforms Starter Kit</h1>
-		<p class="prose text-2xl w-full mx-auto text-left max-w-3xl">
-			{@html marked(displayText, { headerIds: false, mangle: false })}
+        <h1 class="mb-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-orange-700 via-gray to-orange-300  tracking-tight leading-none  md:text-5xl lg:text-6xl ">Sveltekit Platforms Starter Kit</h1>
+		<p class="prose text-2xl w-full mx-auto text-left sm:max-w-3xl overflow-hidden">
+			{@html marked(markdownText, { headerIds: false, mangle: false })}
 		</p>
         
     </div>
