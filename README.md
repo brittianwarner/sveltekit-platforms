@@ -26,6 +26,8 @@ Each subdomain above maps to an app in the `/lib/apps` folder.
 
 The [config.js](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/config.js/) file contains the page mappings needed to create more pages in your app. For example, [this](https://github.com/brittianwarner/sveltekit-platforms/blob/0be64c3132c53d5340245d3fee539e1493606b43/src/lib/apps/app1/config.js#L2) mapping in [app1](https://github.com/brittianwarner/sveltekit-platforms/tree/master/src/lib/apps/app1) maps the [About page](https://app1.platforms.page/about) to the [About.svelte](https://github.com/brittianwarner/sveltekit-platforms/blob/master/src/lib/apps/app1/components/About.svelte) component.
 
+To add another app, create a new folder with the required artifacts in the `/lib/apps` folder. 
+
 _More docs coming soon..._
 
 ## Developing
