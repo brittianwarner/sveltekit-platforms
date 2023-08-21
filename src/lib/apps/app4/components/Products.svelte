@@ -1,7 +1,4 @@
-<svelte:head>
-	<title>Neha's Boutique</title>
-	<meta name="description" content="products of this app" />
-</svelte:head>
+
 
 
 
