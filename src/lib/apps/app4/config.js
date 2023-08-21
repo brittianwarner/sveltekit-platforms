@@ -5,9 +5,8 @@ const pages = {
   "/team": {
     component: "Team",
   },
-  "/features": {
-    component: "Products",
-    pageServerLoad: "/loading/products",
+  "/productcard": {
+    component: "ProductCard"
   },
   "/contact-us": {
     component: "ContactUs",

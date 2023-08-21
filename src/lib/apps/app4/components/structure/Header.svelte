@@ -7,7 +7,7 @@
 
         <li class="px-10 py-7"><a href='/'>Home</a></li>
         <li class="px-10 py-7"><a href='/about'>About Us</a></li>
-        <li class="px-10 py-7"><a href='/products'>Products</a></li>
+        <li class="px-10 py-7"><a href='/productcard'>Products</a></li>
         <li class="px-10 py-7"><a href='/contact-us'>Contact Us</a></li>
         <div class="cart"><img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" alt="cart">
         </ul>
