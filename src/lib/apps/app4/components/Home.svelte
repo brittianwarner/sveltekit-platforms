@@ -27,7 +27,7 @@ const previous = () => {
 
 <div class="container">
 
-	<img src= {carouselPhotos[index]}  alt="carousel image" />	
+	<img src= {carouselPhotos[index]}  alt="carousel" />	
 
 <button class="button" on:click={next}>></button>
 <button class="button-previous" on:click={previous}>&lt;</button>
@@ -61,6 +61,7 @@ font-size:50px;
 margin-left:30px;
 margin-top:300px;
 }
+
 img, button {
 		position: absolute;
 	}
